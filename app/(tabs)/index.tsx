@@ -1,23 +1,31 @@
+// app/(tabs)/index.tsx
 import { Link, router } from "expo-router";
 import { Pressable, Text, View } from "react-native";
 
-const HomePage = () => {
+export default function HomePage() {
   return (
-    <View>
-      <Text>Home Page</Text>
-      <Link href="/users/1">Go to user 1</Link>
+    <View style={{ padding: 20 }}>
+      <Text style={{ fontSize: 24, marginBottom: 20 }}>Home Page</Text>
+
+      {/* Navigation buttons for extra pages */}
       <Pressable
-        onPress={() =>
-          router.push({
-            pathname: "/users/[id]",
-            params: { id: 2 },
-          })
-        }
+        onPress={() => router.push("/calendar")}
+        style={{ marginVertical: 5 }}
       >
-        <Text>Go to user 2</Text>
+        <Text style={{ color: "blue" }}>Calendar</Text>
+      </Pressable>
+      <Pressable
+        onPress={() => router.push("/contacts")}
+        style={{ marginVertical: 5 }}
+      >
+        <Text style={{ color: "blue" }}>Contacts</Text>
+      </Pressable>
+      <Pressable
+        onPress={() => router.push("/documents")}
+        style={{ marginVertical: 5 }}
+      >
+        <Text style={{ color: "blue" }}>Documents</Text>
       </Pressable>
     </View>
   );
-};
-
-export default HomePage;
+}
