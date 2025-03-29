@@ -3,7 +3,7 @@ import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 import { DrawerContentScrollView } from "@react-navigation/drawer";
 
-export function CustomDrawerContent(props: any) {
+export default function CustomDrawerContent(props: any) {
   // You could use props.navigation or other props if needed.
   const user = {
     name: "John Doe",

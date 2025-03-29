@@ -1,10 +1,10 @@
 // app/_layout.tsx
 import { Drawer } from "expo-router/drawer";
-import { CustomDrawerContent } from "./CustomDrawerContent";
+import CustomDrawerContent from "./CustomDrawerContent";
 
 export default function RootLayout() {
   return (
-    <Drawer drawerContent={(props) => <CustomDrawerContent {...props} />}>
+    <Drawer drawerContent={CustomDrawerContent}>
       {/* 
         If you don’t want other routes to appear in the drawer,
         you can hide them with drawerItemStyle: { display: "none" }.

@@ -4,7 +4,7 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function TabsLayout() {
   return (
-    <Tabs>
+    <Tabs initialRouteName="index">
       <Tabs.Screen
         name="index"
         options={{
